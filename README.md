@@ -1,19 +1,25 @@
 //Smart cradle code
 
 #include<Servo.h>
-Servo myservo; // library fo the servo motor
+Servo myservo; 
+// library fo the servo motor
 int pos = 0;
 
-char data = 0; //Variable for storing received data
+char data = 0;
+//Variable for storing received data
+
 const int soundPin = A0; 
 int sensorpin=A5;
-int sensorvalue;//Varible for storing wetness of the baby through soil moisture sensor
-int soundVal = 0;//Varible for storing crying frequncy of baby with the help of sound sensor
+int sensorvalue;
+//Varible for storing wetness of the baby through soil moisture sensor
+int soundVal = 0;
+//Varible for storing crying frequncy of baby with the help of sound sensor
 void setup() 
 {
   myservo.attach(9);
 
-    Serial.begin(9600); //Sets the data rate in bits per second (baud) for serial data transmission
+    Serial.begin(9600);
+    //Sets the data rate in bits per second (baud) for serial data transmission
     pinMode(6, OUTPUT);
 pinMode(8, OUTPUT);
 pinMode(5,OUTPUT);
